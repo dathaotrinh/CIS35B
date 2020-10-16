@@ -10,23 +10,28 @@ public class AutoException extends Exception {
     private String errorMsg;
 
 
+    // default constructor
     public AutoException() {
     }
 
+    // constructor with errorMsg argument
     public AutoException(String errorMsg) {
         this.errorMsg = errorMsg;
     }
 
+    // constructor with errorNo argument
     public AutoException(int errorNo) {
         this.errorNo = errorNo;
         fix(errorNo);
     }
 
+    // constructor with all properties as arguments
     public AutoException(int errorNo, String errorMsg) {
         this.errorNo = errorNo;
         this.errorMsg = errorMsg;
     }
 
+    // getters and setters
     public int getErrorNo() {
         return errorNo;
     }
@@ -43,10 +48,12 @@ public class AutoException extends Exception {
         this.errorMsg = errorMsg;
     }
 
+    // this method can be redundant
     public void printMyProblem() {
         writeLogFile(errorNo, errorMsg);
     }
 
+    // log timestamps for all exceptions that get caught
     public void writeLogFile(int errorNo, String errorMsg) {
 
         FileWriter fileWriter = null;
@@ -78,6 +85,7 @@ public class AutoException extends Exception {
 
     }
 
+    // fix method to catch exception
     public void fix (int errorNo)  {
         int num = (int) Math.ceil((double)errorNo/100);
 

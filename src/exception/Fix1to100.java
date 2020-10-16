@@ -1,5 +1,6 @@
 package exception;
 
+// Exception when some parts are missing in the text file
 public class Fix1to100 {
 
     public Fix1to100() {

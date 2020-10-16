@@ -2,11 +2,9 @@ package exception;
 
 import adapter.BuildAuto;
 import adapter.CreateAuto;
-import adapter.UpdateAuto;
-import model.Automobile;
-
 import java.util.Scanner;
 
+// Exception when text file is empty or not found
 public class Fix101to200 {
     public Fix101to200() {
     }
